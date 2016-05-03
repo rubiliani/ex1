@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Students API</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Students Web-service API</h1>
+                    <p>EX 1 - ws course, this web-service allows you to get students data from mlab db</p>
+                    <h2>Instructions</h2>
+                    <h4>Get all students</h4>
+                    Method: GET<br>
+                    URL Example: <code><a href="https://ex1rubi.herokuapp.com/api/students">/api/students</a></code><br>
+                    Response:
+                    <pre>[
+    {
+        "firstname": "Rubi",
+        "lastname": "Liani",
+        "id": "1234",
+        "grade": 91,
+        "year": 2016
+    }
+    ...
+]
+                    </pre><br>
+
+
+                    <h4>Get student grade by ID</h4>
+                    Method: GET<br>
+                    Param: id<br>
+                    URL Example: <code><a href="https://ex1rubi.herokuapp.com/api/students/grade/1234">/api/students/grade/1234</a></code><br>
+                    Response:
+                    <pre>[
+    {
+        "grade": 91
+    }
+    
+]</pre><br>
+
+                    <h4>Get all excellence students (students with grade 90 and above)</h4>
+                    Method: GET<br>
+                    URL Example: <code><a href="https://ex1rubi.herokuapp.com/api/students/excellence">/api/students/excellence</a></code><br>
+                    Response: students array as above<br><br>
+
+
+                    <h4>Get all excellence students by Year (students with grade 90 and above)</h4>
+                    Method: GET<br>
+                    Param: year<br>
+                    URL Example: <code><a href="https://ex1rubi.herokuapp.com/api/students/excellence/2016">/api/students/excellence/2016</a></code><br>
+                    Response: students array as above<br><br><br>
+
+                </div>
+            </div>
+        </div>
+   
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+    </body>
+
+</html>
